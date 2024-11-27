@@ -156,7 +156,7 @@ submit.addEventListener('click', function () {
         if (type.value === 'expence') {
             let expencedis = document.getElementById('expencedis');
             let value = parseFloat(expencedis.innerText.replace(/,/g, '')) || 0;
-            value -= amount1;
+            value += amount1;
             expencedis.innerText = value.toLocaleString();
         } else if (type.value === 'income') {
             let incomedis = document.getElementById('incomedis');
@@ -164,7 +164,7 @@ submit.addEventListener('click', function () {
             value -= amount1;
             incomedis.innerText = value.toLocaleString();
         }
-    });
+    }); 
 
     // Handle type-based logic (Income/Expense update)
     let type11 = document.querySelector('input[name="type"]:checked');
