@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="dist/styles.css">
+</head>
+<body >
+<!-- nav bar -->
+<nav class="bg-blue-600 p-4 z-20 relative flex sm:p-5">
+  <div class="container mx-auto z-20">
+      <div class="flex flex-wrap items-center justify-between">
+          <h1 class="text-black font-extrabold text-2xl sm:text-3xl">Expense Tracker</h1>
+          
+          <button id="menu-toggle" class=" z-20 lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 z-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+          </button>
+
+          <div id="menu" class="hidden w-full z-20 lg:flex lg:w-auto lg:order-1">
+              <div class="flex flex-col mt-4 lg:flex-row lg:mt-0 lg:space-x-4">
+                  <button id="create" class="font-bold p-0 hover:border-b-1  duration-75">Create</button>
+                  <button class="font-bold p-0 hover:border-b-1 duration-75 filter-btn" data-type="all">All</button>
+                  <button class="font-bold p-0 hover:border-b-1 duration-75 filter-btn" data-type="income">Income</button>
+                  <button class="font-bold p-0 hover:border-b-1 duration-75 filter-btn" data-type="expence">Expense</button>
+              </div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between z-20 w-full lg:w-auto mt-4 lg:mt-0">
+              <div class="flex items-center mb-2 lg:mb-0 mr-4">
+                  <label for="incomedis" class="font-bold text-lg sm:text-xl lg:text-2xl mr-2">Income</label>
+                  <span id="incomedis" class="text-green-600 font-bold bg-black rounded-lg min-w-[5rem] p-1 text-center" type="number">$</span>
+              </div>
+              <div class="flex items-center z-20">
+                  <label for="expencedis" class="font-bold text-lg sm:text-xl lg:text-2xl mr-2">Expense</label>
+                  <span id="expencedis" class="text-red-600 font-bold bg-black rounded-lg min-w-[5rem] p-1 text-center">$</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</nav>
+
+ <!-- add button -->
+  <div id="add-btn" class="h-20 w-20 rounded-full bg-blue-600 text-black font-extrabold text-8xl flex items-center justify-center ml-[1250px] mt-[420px]"><h1 class="text-center -mt-5 hover:cursor-pointer md:ml-10">+</h1></div>
+
+  <!--popup overlay -->
+   <div id="overlay" class="overlay absolute h-full w-full bg-black opacity-85 top-0 left-0 z-10 hidden "></div>
+
+  <!-- popup window -->
+   <div id="popup" class="center h-full w-full top-0 left-0 z-0 items-center justify-center hidden">
+   <div class="popup absolute flex flex-col items-start justify-start top-1/4 left-auto z-20 h-auto w-96 bg-blue-600 rounded-xl pt-5 pr-5 pb-5 pl-5">
+    <form action="">
+    <label for="title" class="font-bold text-xl">Title</label>
+    <input type="text" id="title" class="rounded w-full bg-blue-600 border-b-2" placeholder=" EX: Salary or Rent">
+    <label for="amount" class="font-bold text-xl">Amount</label>
+    <input type="number" id="amount" class="rounded w-full bg-blue-600 border-b-2" placeholder=" EX: 20,000">
+    <label for="discription" class="font-bold text-xl">Discription</label>
+    <textarea id="discription" name="discription" rows="4" class="rounded w-full bg-blue-600 border-b-2" placeholder=" Enter your description here..."></textarea>
+    <button id="clear" type="reset" value="reset" class="bg-black text-white rounded-lg p-1 hover:bg-red-700 w-20">Clear</button>
+  </form>
+    <div class="flex p-3 gap-3">
+      <label for="income">Income</label>
+      <input type="radio" name="type" id="income" value="income" class="">
+      <label for="expence">Expence</label>
+      <input type="radio" name="type" id="expence" value="expence" class="">
+    </div>
+    <div class="flex gap-3 pb-2 w-full justify-end items-center">
+      <button id="submit" class="bg-black text-white rounded-lg p-1 hover:bg-blue-950 w-20">Submit</button>
+      <button id="cancel" class="bg-black text-white rounded-lg p-1 hover:bg-red-700 w-20">Cancel</button>
+      
+ 
+    </div>
+  </div>
+</div>
+  
+  <!-- List box -->
+   <div class="root absolute flex flex-row flex-wrap top-44 overflow-auto -z-0 p-5 gap-3 lg:top-16 md:top-32">
+    <!-- <div class="list-box bg-black h-fit w-64 rounded-lg flex flex-col z-10">
+      <h1 class="p-3 text-blue-600 font-bold">Salary</h1>
+      <h1 class="p-3 text-blue-600 font-bold">20,000</h1>
+      <p class="p-3 text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos doloremque soluta temporibus esse nulla unde molestiae modi quas commodi ullam, alias laborum explicabo illo similique illum vitae sunt corrupti. Sequi?</p>
+      <div class="buttons flex gap-3 p-3 pb-2 justify-end">
+        <button class="bg-blue-600 text-white rounded-lg p-1 hover:bg-blue-950 w-20">Edit</button>
+        <button class="bg-blue-600 text-white rounded-lg p-1 hover:bg-red-700 w-20">Delete</button>
+      </div>
+    </div> -->
+   </div>
+
+<script src="script.js"></script>
+</body>
+</html>
