@@ -158,11 +158,19 @@ submit.addEventListener('click', function () {
             let value = parseFloat(expencedis.innerText.replace(/,/g, '')) || 0;
             value += amount1;
             expencedis.innerText = value.toLocaleString();
+            
+            let incomedis = document.getElementById('incomedis');
+            let value1 = parseFloat(incomedis.innerText.replace(/,/g, '')) || 0;
+        let updatedIncome = value1 + amount1;
+        incomedis.innerText = updatedIncome.toLocaleString();
         } else if (type.value === 'income') {
             let incomedis = document.getElementById('incomedis');
             let value = parseFloat(incomedis.innerText.replace(/,/g, '')) || 0;
             value -= amount1;
             incomedis.innerText = value.toLocaleString();
+
+           
+        
         }
     }); 
 

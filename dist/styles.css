@@ -616,18 +616,6 @@ video {
   top: 25%;
 }
 
-.top-16 {
-  top: 4rem;
-}
-
-.top-\[144px\] {
-  top: 144px;
-}
-
-.top-4 {
-  top: 1rem;
-}
-
 .top-44 {
   top: 11rem;
 }
@@ -689,14 +677,6 @@ video {
   display: none;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-16 {
-  height: 4rem;
-}
-
 .h-20 {
   height: 5rem;
 }
@@ -736,10 +716,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.min-w-20 {
-  min-width: 5rem;
 }
 
 .min-w-\[5rem\] {
@@ -786,16 +762,8 @@ video {
   justify-content: space-between;
 }
 
-.gap-2 {
-  gap: 0.5rem;
-}
-
 .gap-3 {
   gap: 0.75rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .overflow-auto {
@@ -840,10 +808,6 @@ video {
   padding: 0.25rem;
 }
 
-.p-2 {
-  padding: 0.5rem;
-}
-
 .p-3 {
   padding: 0.75rem;
 }
@@ -854,11 +818,6 @@ video {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .pb-2 {
@@ -881,10 +840,6 @@ video {
   padding-top: 1.25rem;
 }
 
-.pl-1 {
-  padding-left: 0.25rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -892,11 +847,6 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-8xl {
@@ -963,10 +913,6 @@ video {
   cursor: pointer;
 }
 
-.hover\:border-b-2:hover {
-  border-bottom-width: 2px;
-}
-
 .hover\:bg-blue-950:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(23 37 84 / var(--tw-bg-opacity, 1));
@@ -977,16 +923,7 @@ video {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
 }
 
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 @media (min-width: 640px) {
-  .sm\:ml-10 {
-    margin-left: 2.5rem;
-  }
-
   .sm\:p-5 {
     padding: 1.25rem;
   }
@@ -1006,17 +943,9 @@ video {
   .md\:top-32 {
     top: 8rem;
   }
-
-  .md\:ml-10 {
-    margin-left: 2.5rem;
-  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:static {
-    position: static;
-  }
-
   .lg\:top-16 {
     top: 4rem;
   }
@@ -1031,10 +960,6 @@ video {
 
   .lg\:mt-0 {
     margin-top: 0px;
-  }
-
-  .lg\:block {
-    display: block;
   }
 
   .lg\:flex {
@@ -1057,14 +982,6 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .lg\:bg-transparent {
-    background-color: transparent;
-  }
-
-  .lg\:pr-6 {
-    padding-right: 1.5rem;
   }
 
   .lg\:text-2xl {
